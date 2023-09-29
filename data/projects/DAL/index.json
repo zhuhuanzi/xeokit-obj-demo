@@ -1,0 +1,25 @@
+{
+  "id": "DAL",
+  "name": "DAL",
+  "models": [
+    {
+      "id": "design",
+      "name": "DAL Design"
+    }
+  ],
+  "viewerConfigs": {
+    "backgroundColor": [
+      0.95,
+      0.95,
+      1.0
+    ]
+  },
+  "viewerContent": {
+    "modelsLoaded": [
+      "design"
+    ]
+  },
+  "viewerState": {
+    "threeDEnabled": true
+  }
+}

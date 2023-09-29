@@ -1,0 +1,23 @@
+{
+    "id": "sportsCar",
+    "name": "sportsCar",
+    "models": [
+        {
+            "id": "design",
+            "name": "sportsCar",
+            "loader": "obj"
+        }
+    ],
+    "viewerConfigs": {
+        "backgroundColor": [
+            0.95,
+            0.95,
+            1.0
+        ]
+    },
+    "viewerContent": {
+        "modelsLoaded": [
+            "design"
+        ]
+    }
+}

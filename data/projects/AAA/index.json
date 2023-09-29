@@ -1,0 +1,23 @@
+{
+    "id": "AAA",
+    "name": "AAA",
+    "models": [
+        {
+            "id": "design",
+            "name": "AAA",
+            "loader": "obj"
+        }
+    ],
+    "viewerConfigs": {
+        "backgroundColor": [
+            0.95,
+            0.95,
+            1.0
+        ]
+    },
+    "viewerContent": {
+        "modelsLoaded": [
+            "design"
+        ]
+    }
+}

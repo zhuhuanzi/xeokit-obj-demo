@@ -1,0 +1,20 @@
+{
+    "projects": [
+        {
+            "id": "DAL",
+            "name": "DAL"
+        },
+        {
+            "id": "VVIP",
+            "name": "VVIP"
+        },
+        {
+            "id": "sportsCar",
+            "name": "sportsCar"
+        },
+        {
+            "id": "AAA",
+            "name": "AAA"
+        }
+    ]
+}

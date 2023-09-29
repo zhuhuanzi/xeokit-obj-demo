@@ -1,0 +1,65 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <title>xeokit BIM Viewer</title>
+    <link rel="stylesheet"
+        href="./lib/fontawesome-free-5.11.2-web/css/all.min.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="./node_modules/xeokit-bim-viewer/dist/xeokit-bim-viewer.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="./index.css">
+</head>
+
+<body>
+
+    <input type="checkbox"
+        id="explorer_toggle" />
+    <label for="explorer_toggle"
+        class="explorer_toggle_label xeokit-btn fas fa-2x fa-sitemap"
+        data-tippy-content="Toggle explorer panel"></label>
+    <div id="myExplorer"></div>
+    <div id="myToolbar"></div>
+    <div id="myViewer">
+        <canvas id="myCanvas"></canvas>
+        <canvas id="myNavCubeCanvas"></canvas>
+    </div>
+
+
+
+    <script type="module">
+        import { Server, BIMViewer } from './node_modules/xeokit-bim-viewer/dist/xeokit-bim-viewer.es.js';
+        window.onload = function () {
+            // Server client will load data from the file systems
+            const server = new Server({
+                dataDir: "/data"
+            });
+
+            // Create  BIMViewer that loads data via the Server
+            const bimViewer = new BIMViewer(server, {
+                canvasElement: document.getElementById("myCanvas"), // WebGL canvas
+                explorerElement: document.getElementById("myExplorer"), // Left panel
+                toolbarElement: document.getElementById("myToolbar"), // Toolbar
+                navCubeCanvasElement: document.getElementById("myNavCubeCanvas"),
+                busyModelBackdropElement: document.getElementById("myViewer"),
+                enableEditModels: false
+            });
+
+            // Configure our viewer
+            bimViewer.setConfigs({});
+
+            // 加载模型
+            // ==== obj ====
+            //bimViewer.loadProject('sportsCar', () => { });  // this obj is OK
+            bimViewer.loadProject('AAA', () => { });    // this obj is not 
+            
+            
+            // ==== xkt ====
+            // bimViewer.loadProject('DAL', () => {});
+        }
+    </script>
+</body>
